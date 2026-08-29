@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora da Oficina</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="brand"><span class="wrench">🔧</span> MECÂNICA <span>HELMUT'S GARAGE</span></div>
+  </header>
+
+  <nav class="tabs" id="tabs"></nav>
+
+  <main class="main">
+    <div class="search-wrap">
+      <span>🔍</span>
+      <input id="search" type="search" placeholder="Digite para buscar uma peça ou serviço rapidamente...">
+    </div>
+
+    <section id="items" class="items-grid"></section>
+    <div id="empty" class="empty hidden">Nenhum item encontrado.</div>
+  </main>
+
+  <section class="materials" aria-label="Materiais">
+    <div>🔩 Alumínio: <b>0</b></div>
+    <div>🧱 Borracha: <b>0</b></div>
+    <div>⚡ Cobre: <b>0</b></div>
+    <div>🧪 Plástico: <b>0</b></div>
+    <div>📦 Sucata: <b>0</b></div>
+  </section>
+
+  <footer class="footer">
+    <div class="total-block">
+      <small>TOTAL COM DESCONTO</small>
+      <strong id="total">$0</strong>
+    </div>
+
+    <select id="discount" aria-label="Desconto">
+      <option value="0">Sem Desconto</option>
+      <option value="5">5%</option>
+      <option value="10">10%</option>
+      <option value="15">15%</option>
+      <option value="20">20%</option>
+      <option value="25">25%</option>
+    </select>
+
+    <input id="clientName" type="text" placeholder="Nome do Cliente (Opcional)">
+    <input id="passport" type="text" placeholder="Passaporte / ID (Obrigatório)">
+
+    <div class="footer-actions">
+      <button id="copyBtn" class="btn copy">COPIAR</button>
+      <button id="clearBtn" class="btn clear">LIMPAR</button>
+      <button id="saveBtn" class="btn save">SALVAR ORDEM</button>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
